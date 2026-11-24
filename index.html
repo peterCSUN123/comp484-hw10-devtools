@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Your daily companion. A rugged Giga Pet game with a German Shepherd.">
+    <title>Giga Pet</title>
+    <link rel="icon" href="shepherd.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <!-- Load the bundled jQuery library before our game code. -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="page-header">
+      <a class="brand" href="index.html" aria-label="Giga Pet home">
+        GIGA PET
+      </a>
+      <span class="header-note">LOYALTY IS EARNED. EVERY DAY.</span>
+    </header>
+
+    <main>
+      <div class="intro">
+        <div>
+          <p class="eyebrow"><span class="line" aria-hidden="true"></span> ALWAYS BY YOUR SIDE</p>
+          <h1>GOOD DOG.<br><span>GREAT COMPANY.</span></h1>
+        </div>
+        <p>A little training. A little play. A bond that lasts.<br>Look after your companion, one day at a time.</p>
+      </div>
+
+      <div class="pet-card">
+        <section class="pet-image-container" aria-label="Your pet">
+          <div class="image-heading"><span class="room-label">OUT IN THE FIELD</span><span class="photo-label">GERMAN SHEPHERD</span></div>
+          <div class="photo-frame">
+            <img class="pet-image" src="shepherd.png" alt="A German Shepherd running through a sunny green meadow" width="1001" height="742">
+          </div>
+          <p class="pet-caption"><span class="caption-dot" aria-hidden="true"></span> READY FOR THE NEXT ADVENTURE.</p>
+        </section>
+
+        <section class="dashboard" aria-labelledby="pet-heading">
+          <div class="profile-heading">
+            <p class="eyebrow">YOUR COMPANION</p>
+            <span class="breed-label">GERMAN SHEPHERD</span>
+          </div>
+          <h2 id="pet-heading"><span class="name">Chop</span></h2>
+          <p class="pet-description">Sharp instincts. Steady loyalty.</p>
+
+          <div class="stats">
+            <div class="stat"><span>Weight</span><strong><span class="weight">12</span><small>pounds</small></strong></div>
+            <div class="stat"><span>Happiness</span><strong><span class="happiness">8</span><small>tail wags / min</small></strong></div>
+          </div>
+          <!-- The new behavior is displayed below the happiness information. -->
+          <p class="mood-line"><span class="status-dot" aria-hidden="true"></span> Feeling <strong class="mood">content</strong></p>
+
+          <!-- Every action writes a visible comment here. No alert or console needed. -->
+          <div class="message-box" role="status" aria-live="polite" aria-atomic="true">
+            <span class="message-label">FROM YOUR COMPANION</span>
+            <p class="pet-message">Woof! I&apos;m Chop. Ready when you are.</p>
+          </div>
+
+          <p class="action-label">MAKE TIME FOR YOUR DOG <span aria-hidden="true">↙</span></p>
+          <div class="button-container">
+            <button class="treat-button" type="button"><span class="button-number" aria-hidden="true">01</span><span class="button-copy">Treat<small>Fuel up</small></span><span class="button-arrow" aria-hidden="true">↗</span></button>
+            <button class="play-button" type="button"><span class="button-number" aria-hidden="true">02</span><span class="button-copy">Play<small>Go fetch</small></span><span class="button-arrow" aria-hidden="true">↗</span></button>
+            <button class="exercise-button" type="button"><span class="button-number" aria-hidden="true">03</span><span class="button-copy">Exercise<small>Hit the trail</small></span><span class="button-arrow" aria-hidden="true">↗</span></button>
+            <button class="cuddle-button" type="button"><span class="button-number" aria-hidden="true">04</span><span class="button-copy">Cuddle<small>Build the bond</small></span><span class="button-arrow" aria-hidden="true">↗</span></button>
+          </div>
+        </section>
+      </div>
+
+      <section class="activity-panel" aria-labelledby="activity-heading">
+        <div class="activity-heading">
+          <h2 id="activity-heading">Recent activity</h2>
+          <span>LAST 5 ACTIONS · NEWEST FIRST</span>
+        </div>
+        <ul id="activity-list">
+          <li id="activity-empty">Give your companion a treat, some exercise, or a little attention to get started.</li>
+          <!-- jQuery .clone() copies this hidden template; .insertBefore() places each copy first. -->
+          <li id="activity-template" class="activity-entry" hidden>
+            <span class="activity-number"></span>
+            <strong class="activity-action"></strong>
+            <span class="activity-details"></span>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer><span>GIGA PET</span></footer>
+  </body>
+</html>
