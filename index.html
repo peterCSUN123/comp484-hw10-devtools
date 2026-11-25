@@ -10,6 +10,7 @@
     <!-- Load the bundled jQuery library before our game code. -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
     <script src="script.js" defer></script>
+    <script src="devtools.js" defer></script>
   </head>
   <body>
     <header class="page-header">
@@ -82,6 +83,32 @@
             <span class="activity-details"></span>
           </li>
         </ul>
+      </section>
+      <section class="devtools-panel" aria-labelledby="devtools-heading">
+        <div class="activity-heading">
+          <h2 id="devtools-heading">DevTools practice</h2>
+          <span>PROJECT 2 COPY · HOMEWORK 10</span>
+        </div>
+        <p>Open Chrome DevTools with <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd>.
+          Use the Console for messages and Sources to debug the Treat action.</p>
+        <div class="lab-actions" aria-label="Console logging examples">
+          <button type="button" id="log-info">Log Info</button>
+          <button type="button" id="log-warning">Log Warning</button>
+          <button type="button" id="log-error">Log Error</button>
+          <button type="button" id="log-table">Log Table</button>
+          <button type="button" id="log-group">Log Group</button>
+          <button type="button" id="log-custom">Log Custom</button>
+          <button type="button" id="log-all">Run all logs</button>
+        </div>
+        <h3>Browser diagnostics</h3>
+        <div class="lab-actions">
+          <button type="button" id="cause-404">Cause 404</button>
+          <button type="button" id="cause-typeerror">Cause Error</button>
+          <button type="button" id="cause-violation">Cause Violation (3 seconds)</button>
+          <button type="button" id="reset-pet">Reset pet</button>
+        </div>
+        <p id="lab-status" role="status" aria-live="polite">Ready. Choose an example above.</p>
+        <div id="devtools-requests" hidden></div>
       </section>
     </main>
 

@@ -18,10 +18,13 @@ $(function() { // Makes sure that all the DOM elements are ready to be used.
 });
 
 function clickedTreatButton() {
+  const currentWeight = pet_info.weight;
+  // FIX: store the treat gain as a number before adding it to the weight.
+  const treatWeight = 2;
+  const newWeight = currentWeight + treatWeight; // BREAKPOINT: ADDITION
+  pet_info.weight = newWeight; // BREAKPOINT: RESULT
   // Increase pet happiness.
   pet_info.happiness += 5;
-  // Increase pet weight.
-  pet_info.weight += 2;
   checkAndUpdatePetInfoInHtml();
   showPetComment("Treat", "Damn its YUMMY!");
   animatePet();
@@ -95,6 +98,8 @@ function showPetComment(action, message) {
   // .text() is a starter method. It safely displays the pet's comment as text.
   $('.pet-message').text(message);
   addActivity(action);
+  // Snapshot the current values for the assignment's console logging example.
+  console.info('[GigaPet:ACTION] ' + action, { ...pet_info });
 }
 
 function addActivity(action) {

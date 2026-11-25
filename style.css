@@ -454,3 +454,17 @@ footer b {
   text-align: right;
 }
 
+
+/* DevTools practice additions. */
+[hidden] { display: none !important; }
+.devtools-panel { margin-top: 22px; padding: 22px; border: 1px solid var(--border); border-top: 3px solid var(--bronze); border-radius: 4px; background: #1a1e17; }
+.devtools-panel p { color: var(--muted); font-size: 12px; }
+.devtools-panel h3 { margin: 24px 0 10px; font-size: 13px; }
+.lab-actions { display: flex; flex-wrap: wrap; gap: 9px; }
+.lab-actions button { min-height: 42px; font-size: 11px; padding: 10px 14px; }
+
+#lab-status { padding: 12px; border-left: 3px solid var(--olive); background: #141712; color: var(--ink); }
+kbd { border: 1px solid var(--border); border-radius: 3px; padding: 2px 5px; color: var(--ink); }
+.pet-bounce { animation: pet-bounce 400ms ease; }
+@keyframes pet-bounce { 0%, 100% { top: 0; } 50% { top: -10px; } }
+
